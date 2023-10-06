@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 80vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.5s ease-in;
+    color:whitesmoke;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.panel h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw; /* Corrected the typo by removing the extra colon */
+    }
+}
+
+/* Corrected the typo from .panle to .panel */
+.panel:nth-last-of-type(1),
+.panel:nth-last-of-type(2),
+.panel:nth :last-of-type(3),
+.panel:nth:last-of-type(4){
+    display: none;
+}
